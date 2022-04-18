@@ -17,7 +17,7 @@
         </a>
         <div>
           <img src="img/icn_search.svg" width="23" height="23" alt="Search">
-          <img class="ml-4" src="img/icn_person.svg" alt="Profile">
+          <img class="ml-4" src="img/icn_person.svg" alt="Profile" width="20" height="23">
         </div>
       </div>
     </nav>
@@ -27,10 +27,34 @@
           <h1 class="mb-3">Start Your Search!</h1>
           <h2>Look up for people’s name, photos and online profiles with their email address or phone number. See what you find!</h2>
         </div>
-        
         <form>
+           <div class="container">
+               <div class="row">
+                   <div style="width:150px" class="lblSearchCaption">
+                      <label class="searchlabel">TYPE OF SEARCH:</label>
+                   </div>
+                   <div class="searchoption">
+                        <div>
+                            <input type="radio" id="emailaddress" name="search" value="emailaddress" checked>
+                            <label for="emailaddress">
+                             <span>
+                                EMAIL ADDRESS
+                             </span>
+                            </label>
+                        </div>
+                       <div>
+                          <input type="radio" id="phonenumber" name="search" value="phonenumber">
+                          <label for="phonenumber">
+                            <span>
+                                PHONE NUMBER
+                              </span>
+                          </label>
+                       </div>
+                   </div>
+              </div>
+          </div>
           <div class="input-group">
-            <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
+            <input class="form-control" type="text" name="txtSearch" placeholder="Enter an Email Address" />
             <p class="error-msg">Please enter a valid email address</p>
             <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
           </div>
@@ -41,7 +65,7 @@
         </form>
       </div>
     </section>
-
+      
     <section class="features">
       <div class="container">
         <div class="headline">
@@ -50,50 +74,72 @@
         </div>
         <div class="row">
           <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">1</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+          <div class="container">
+              <div class="row">
+                 <div class="list-item col-md-12 d-flex align-items-lg-center">
+                    <div class="list-circle">1</div>
+                    <div class="list-text">
+                      <h3>Lorem Ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="list-item col-md-12 d-flex align-items-lg-center">
+                    <div class="list-circle">2</div>
+                    <div class="list-text">
+                      <h3>Lorem Ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="list-item col-md-12 d-flex align-items-lg-center mb-md-0">
+                    <div class="list-circle">3</div>
+                    <div class="list-text">
+                      <h3>Lorem Ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
           </div>
           <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">4</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+             <div class="container">
+              <div class="row">
+                  <div class="list-item col-md-12 d-flex align-items-lg-center">
+                    <div class="list-circle">4</div>
+                    <div class="list-text">
+                      <h3>Lorem Ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="list-item col-md-12 d-flex align-items-lg-center">
+                    <div class="list-circle">5</div>
+                    <div class="list-text">
+                      <h3>Lorem Ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                    <div class="list-item col-md-12 d-flex align-items-lg-center mb-md-0">
+                        <div class="list-circle">6</div>
+                        <div class="list-text">
+                          <h3>Lorem Ipsum</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+              </div>
           </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">2</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">5</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center mb-md-0">
-            <div class="list-circle">3</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center mb-md-0">
-            <div class="list-circle">6</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+   </section>
+   
+   
     
     <footer class="footer">
       <div class="container">
@@ -112,5 +158,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
+
   </body>
 </html>

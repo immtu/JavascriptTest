@@ -17,11 +17,11 @@
         </a>
         <div>
           <img src="img/icn_search.svg" width="23" height="23" alt="Search">
-          <img class="ml-4" src="img/icn_person.svg" alt="Profile">
+          <img class="ml-4" src="img/icn_person.svg" alt="Profile" width="20" height="23">
         </div>
       </div>
     </nav>
-    <section class="result">
+    <section class="result mainbody">
       <div class="container">
         <div class="headline text-center">
           <h1 id="result-count" class="text-primary mb-3"></h1>
@@ -61,7 +61,7 @@
       </div>
     </section>
 
-    <section class="search-again">
+    <section class="search-again mainbody">
       <div class="container">
         <div class="headline text-white text-center">
           <h1 class="mb-3">Can't Find The Right Person?</h1>
@@ -106,6 +106,23 @@
       </div>
     </section>
     
+      <!-- Image loader -->
+   <section class="result" id="loader" style="display:none">
+     <div class="container">
+           <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                    <img src='img/loading_spinner.gif'>
+
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                  <span class="loadingText">Please wait a moment...</span>
+               </div>
+            </div>
+     </div>
+   </section>
+
     <footer class="footer">
       <div class="container">
         <div class="row align-items-center">

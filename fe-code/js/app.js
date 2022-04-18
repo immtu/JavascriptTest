@@ -1,7 +1,6 @@
 $(document).ready(function () {
     const txtSearchfor = $('input[name="txtSearch"]');
-
-    $('input[name="search"]').on("change", function (e) {
+    $('input[name="search"]').on('change', function (e) {
         e.preventDefault();
         const invalidEmailError = 'Please enter a valid email address';
         const invalidPhoneError = 'Please enter a valid phone number';
@@ -9,7 +8,7 @@ $(document).ready(function () {
         const phonePlaceHolder = 'Enter a Phone Number';
         let searchType = $('input[name="search"]:checked').val();
         showHideError(false);
-        if (searchType.toLowerCase() === "emailaddress") {
+        if (searchType.toLowerCase() === 'emailaddress') {
             $('.error-msg').html(invalidEmailError);
             txtSearchfor[0].placeholder = emailPlaceHolder;
         }
@@ -20,10 +19,10 @@ $(document).ready(function () {
     });
 
 
-    $("#btn-search").on("click", function (e) {
+    $("#btn-search").on('click', function (e) {
         e.preventDefault();
         let searchType = $('input[name="search"]:checked').val();
-        if (searchType.toLowerCase() === "emailaddress") {
+        if (searchType.toLowerCase() === 'emailaddress') {
             processSearch(true);
         }
         else {
@@ -39,7 +38,7 @@ $(document).ready(function () {
         searchValue = txtSearchfor.val();
 
         var isvalidated = false;
-        if (searchType.toLowerCase() === "emailaddress") {
+        if (searchType.toLowerCase() === 'emailaddress') {
              if (validation.isEmailAddress(searchValue)) {
                 url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + searchValue;
                 isvalidated = true;
@@ -98,23 +97,28 @@ $(document).ready(function () {
 
     function showHideError(iserror) {
         if (iserror) {
-            txtSearchfor[0].parentNode.classList.add("error");
+            txtSearchfor[0].parentNode.classList.add('error');
         }
         else {
-            txtSearchfor[0].parentNode.classList.remove("error");
+            txtSearchfor[0].parentNode.classList.remove('error');
         }
     }
 
     function getRespectiveInormation(url) {
-        const proxyurl = "";
-        $("body").addClass("loading");
+        const proxyurl = '';
+        $('.mainbody').hide();
+        $('#loader').show();
         fetch(proxyurl + url)
             .then((response) => response.text())
             .then(function (contents) {
-                localStorage.setItem("userObject", contents);
-                window.location.href = "result.html";
+                localStorage.setItem('userObject', contents);
+                window.location.href = 'result.html';
             })
-            .catch((e) => console.log(e));
+            .catch((e) => {
+                console.log(e);
+                $('.mainbody').show();
+                $('#loader').hide();
+            });
     }
 
     let validation = {
